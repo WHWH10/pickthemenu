@@ -176,7 +176,7 @@ class _RmHomeState extends State<RmHome> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: List.generate(5, (index) {
-              return PopularCard(imageUrl: popularUrl[index]);
+              return PopularCard(imageUrl: popularImageUrl[index], name: popularName[index]);
             }),
           )),
     );

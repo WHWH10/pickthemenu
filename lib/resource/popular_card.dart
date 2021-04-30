@@ -3,9 +3,9 @@ import 'package:random_menu/resource/constant.dart';
 import 'package:random_menu/ui/detail/rm_popular_detail.dart';
 
 class PopularCard extends StatefulWidget {
-  final String imageUrl;
+  final String imageUrl, name;
 
-  const PopularCard({Key key, this.imageUrl}) : super(key: key);
+  const PopularCard({Key key, this.imageUrl, this.name}) : super(key: key);
 
   @override
   PopularCardState createState() => PopularCardState();
@@ -35,7 +35,7 @@ class PopularCardState extends State<PopularCard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => RmPopularDetail(tag: widget.imageUrl)),
+            MaterialPageRoute(builder: (context) => RmPopularDetail(tag: widget.imageUrl, name: widget.name)),
           );
         },
         child: Hero(
